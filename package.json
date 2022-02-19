@@ -1,0 +1,20 @@
+{
+  "name": "coal-power-plant",
+  "version": "1.0.0",
+  "description": "Calculator for coal power plant",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+      "start": "electron ."
+  },
+  "keywords": [
+    "coal",
+    "power",
+    "plant"
+  ],
+  "author": "MaSprGit",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^17.0.1"
+  }
+}
