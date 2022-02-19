@@ -1,0 +1,327 @@
+<!DOCTYPE html
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="de_DE" lang="de_DE" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Speisewasservorw&#228;rmung</title>
+
+<style type="text/css">
+body { 	    font-family: Verdana;
+		 				margin-top: 0px;	
+						margin-left: 0px;		 
+		 				background: #ffffff url(background_neu.png) center top repeat-x;}
+					
+#content {	width: 950px;
+						margin: auto; }
+#contentImage {
+						position: absolute;
+						width: 950px;
+						height: 700px;
+						box-shadow: 0px 2px 15px #000000;
+						background: #D7D882  url(speisewasser.png) 280px 180px no-repeat;}
+						
+#header {		position: absolute;
+						width: 950px;
+						height: 140px;		
+						color: #ffffff; 						
+						border: none;
+						background: url(header_back_neu.jpg) center no-repeat; }
+#header h2 {padding-left:10px;
+					 	text-shadow: 2px 2px 5px #000000; }			
+						
+#einleitung {
+						position: absolute;
+						margin-top: 90px;
+						width: 930px;
+						height: 50px;
+						padding-left: 10px;
+						padding-right: 10px;
+						padding-top: 5px;
+						font-size: 90%;
+						font-style: italic; }
+						
+#einleitungBack {
+						position: absolute;
+						margin-top: 90px;
+						width: 950px;
+						height: 50px;
+						background-color: white;
+						opacity: 0.75; }	
+						
+#deck			{ position:absolute;
+						width: 950px; 
+						height: 20px; 
+						overflow: hidden;
+						margin: auto;
+						margin-top: 140px;
+						box-shadow: 0px 2px 15px #000000; }		
+																						
+.anleitung {position: absolute;
+					 	font-variant: small-caps;
+						font-weight: bold;
+						color: #4d0600; }
+#anleitung1 {
+						margin-top: 170px;
+						margin-left: 20px; }						
+#anleitung2 {
+						margin-top: 170px;
+						margin-left: 700px; }
+						
+#werte {		text-align: center;
+						margin-top: 200px;											
+						width: 260px;
+						box-shadow: 0px 5px 15px #3D1010;}
+#werte:hover {
+						background-color: #4d0600;
+						color: #fff60b;
+						cursor: pointer; }						
+#berechnung {
+						margin-top: 200px;
+						margin-left: 680px;
+						width: 260px;
+						padding-top: 0;
+						box-shadow: 0px 5px 15px #3D1010; }					
+
+.eingabenBackground {
+						background-color: #4d0600;
+						position: absolute;
+						opacity: 0.9;
+
+						border: none;
+						border-radius: 5px;
+						box-shadow: 0px 5px 15px #3D1010; }									
+.eingaben { border: none;
+						position: absolute;
+						border-radius: 5px;
+						font-size: 80%;
+						color: #fff60b;	}
+
+#ebene1	{		margin-top: 315px;
+						width: 500px;					
+						display: none; }
+#ebene1Background {
+						margin-top: 315px;
+						width: 500px;
+						height: 360px;
+						display: none;	}	
+						
+.label    { position: absolute;		
+						padding: 5px;
+						font-size: 80%;	
+						background-color: #9c0200;
+						border: none;		
+						border-radius: 5px;	}						
+.beschriftung {
+						margin-left: 120px;}											
+label 		{ position: absolute;
+						float: left;
+						margin-left: 10px; }						
+input[type=text] {
+						width: 50px;
+						position: absolute;
+						margin-left: 60px;
+						border-radius: 5px;
+						text-align: right; }	
+
+
+.berechnenButton {
+						border-radius: 5px;
+						font-size: 15px;
+						background-color: #000000;
+						color: #ff6100;
+						text-align: center;
+						float: right; }	
+.berechnenButton:hover {		
+            cursor: pointer; }	
+																	
+.closeX {		color: #ff0000;      																	 					  
+						background-color: #000000;					
+						font-size: 20px;					
+						width: 27px;
+						margin: 0px;
+						padding: 0px;
+						text-align: center;
+						border-radius: 5px;
+						border: 2px solid;
+						position: relative;
+						float: right; }
+.closeX:hover {
+						cursor: pointer; }											
+#foot			{ position:absolute;
+						width: 950px; 
+						height: 20px; 
+						overflow: hidden;
+						margin: auto;
+						margin-top: 700px;
+						box-shadow: 0px -2px 15px #000000; }
+						
+.trenn {    height: 0px;
+			 			border-bottom: 1px solid;
+						padding: 0;
+						margin-bottom: -7px; }
+											
+</style>
+<script type="text/javascript" src="formeln_speisewasser.js"></script>
+<script type="text/javascript" src="dynamik_speisewasser.js"></script>
+
+<script type="text/javascript" src="footer.js"></script>
+<link rel="stylesheet" href="footer.css" type="text/css" />
+
+<link rel="stylesheet" href="navi.css" type="text/css" />
+</head>
+
+<body>
+
+<!-- Navigation -->
+<a href="elektrofilter.htm"><img id="navi_vor" src="navi_vor.png" height="50" style="border: 0;" alt="weiter" /></a>
+<a href="kuehlturm.htm"><img id="navi_back" src="navi_back.png" height="50" style="border: 0;" alt="back" /></a>
+<a href="home.htm"><img id="navi_home" src="navi_home.png" height="50" style="border: 0;" alt="Startseite" /></a>
+
+<!-- Footer mit Impressum -->
+	<img id="footer_button" src="footer_button.png" height="50" onclick="footer()" alt="Impressum an" />
+  <img id="footer_button_minus" src="footer_button_minus.png" height="50" onclick="footerMinus()"  alt="Impressum aus"/>
+  <div id="footer_content">
+  	<div id="footer_all">
+  	  <div id="footer_top">
+  		  <div id="footer_logo">
+    			<a href="http://www.fh-trier.de" target="_blank"><img src="logo_fh.png" height="30" alt="Fachhochschule Trier" /> Fachhochschule Trier</a>
+  			</div>
+  			<div id="footer_impressum">
+  			  <p onmouseover="impressum()" onmouseout="impressumOut()">Impressum</p>
+  			</div>
+  		</div>
+  		<div id="footer_info">
+  		  <div id="footer_copy">
+  			  <p>Copyright &#169; 2012 Markus Springer. All rights reserved.<br />
+  				   mail to: <a href="mailto:springem@fh-trier.de">Webmaster</a></p>
+  			</div>
+  			<div id="footer_name">
+    			<p>Kraftwerkstechnik, Luftreinhaltung WS 2011/12<br />
+    			   Kohlekraftwerk Ibbenbüren - RWE Power AG</p>
+  			</div>
+  		</div>
+    	<div id="impressum">
+        <h3>Projektarbeit der Vorlesung Kraftwerkstechnik und Luftreinhaltung WS-2011/12<br />
+        	   im Masterstudiengang Gebäude- und Energiemanagement</h3>
+        <p>erstellt von:<br />
+    				 Markus Springer<br />
+        		 Christian Lübeck</p>
+    	</div>
+		</div>	
+  </div>	
+<!-- Inhalt -->
+<div id="content">
+  <div id="contentImage"></div>
+  <div id="header">
+	  <h2>Speisewasservorwärmung</h2>
+  </div>
+  <div id="einleitungBack"></div>
+	<p id="einleitung">Hinter der Kondensatpumpe befindet sich der Niederdruckteil der Speisewasservorwärmung. Die dem Behälter nachgeschaltete Speisewasserturbine erhöht den Druck auf 256 bar, anschließend folgt die Hochdruckvorwärmung.</p>
+	
+	<div id="deck" ><img src="background_html_klein.png"  alt="" /></div>
+	<p id="anleitung1" class="anleitung">1.&nbsp;Dateneingabe!</p>
+	<p id="anleitung2" class="anleitung">2.&nbsp;Berechnung&nbsp;starten!</p>
+
+	<div class="label" id="werte" onclick="eingaben()">
+    <h3>Zustandsdaten Speisewasser</h3>
+    <p>Geben Sie hier die notwendigen Daten ein:</p>
+  </div>
+						 <!-- Berechnung Starten -->
+	<div class="label" id="berechnung">
+    <h3>Energiezufuhr<br />nach Bereich:<input class="berechnenButton" type="button" value="Berechnen!" onclick="qStrom()" /></h3>
+		
+		<div>
+  		<label for="qnd" >Q<sub>ND</sub> = </label>
+  		<input id="qnd" type="text" value="" />
+  		<p class="beschriftung"> MW - Niederdruck</p>
+  	</div>
+		<div>		
+      <label for="qsbw" >Q<sub>SB</sub>= </label>
+			<input id="qsbw" type="text" value="" />	
+			<p class="beschriftung"> MW - SW-Behälter</p>		
+		</div>
+		<div>		
+      <label for="pst" >P<sub>ST</sub> = </label>
+			<input id="pst" type="text" value="" />	
+			<p class="beschriftung"> MW - SW-Turbine</p>	
+		</div>
+		<div>		
+      <label for="qhd" >Q<sub>HD</sub> = </label>
+			<input id="qhd" type="text" value="" />	
+			<p class="beschriftung"> MW - Hochdruck</p>	
+		</div>
+		<h3>Summe Energiezufuhr der Vorwärmung:</h3>
+		<div>		
+      <label for="qswv" >Q<sub>SWV</sub>= </label>
+			<input id="qswv" type="text" value="" />	
+			<p class="beschriftung"> MW</p>		
+		</div>
+  </div>
+								<!-- Daten für Speisewasser -->
+  <div class="eingabenBackground" id="ebene1Background"></div>								
+  <div class="eingaben" id="ebene1">
+    <div><input class="closeX" type="button" value="X" onclick="closeDiv('ebene1')" /></div>
+  	<div>
+	    <label for="mSpwNd">&#7745;<sub>ND</sub> = </label>
+			<input id="mSpwNd" type="text" value="529,435" />
+			<p class="beschriftung"> kg/s - Massenstrom Speisewasser, Niederdruck</p>
+	  </div>
+	  <div>
+	    <label for="hndEin">h<sub>ND1</sub>= </label>
+			<input id="hndEin" type="text" value="189,73" />
+			<p class="beschriftung"> kJ/kg - Enthalpie Speisewasser, Eintritt ND</p>
+	  </div>
+		<div>
+	    <label for="hndAus">h<sub>ND2</sub>= </label>
+			<input id="hndAus" type="text" value="678,80" />
+			<p class="beschriftung"> kJ/kg - Enthalpie Speisewasser, Austritt ND</p>
+	  </div>
+		<div class="trenn"></div>
+		<div>
+	    <label for="mSpwB">&#7745;<sub>SB2</sub>= </label>
+			<input id="mSpwB" type="text" value="620,56" />
+			<p class="beschriftung"> kg/s - Massenstrom Speisewasser, Austritt Behälter</p>
+	  </div>
+		<div>
+	    <label for="hSwb">h<sub>SB2</sub>= </label>
+			<input id="hSwb" type="text" value="795,20" />
+			<p class="beschriftung"> kJ/kg - Enthalpie Speisewasser, Austritt Behälter</p>
+	  </div>
+		<div class="trenn"></div>
+		<div>
+	    <label for="mSt">&#7745;<sub>D</sub> = </label>
+			<input id="mSt" type="text" value="32,526" />
+			<p class="beschriftung"> kg/s - Massenstrom Dampf, SW-Turbine</p>
+	  </div>		
+	  <div>
+	    <label for="hSt1">h<sub>ST1</sub> = </label>
+			<input id="hSt1" type="text" value="3089,0" />
+			<p class="beschriftung"> kJ/kg - Enthalpie Dampf, Eintritt SW-Turbine</p>
+	  </div>
+		<div>
+	    <label for="hSt2">h<sub>ST2</sub> = </label>
+			<input id="hSt2" type="text" value="2465,5" />
+			<p class="beschriftung"> kJ/kg - Enthalpie Dampf, Austritt SW-Turbine</p>
+	  </div>
+		<div class="trenn"></div>
+		<div>
+	    <label for="mSpwHd">&#7745;<sub>HD</sub> = </label>
+			<input id="mSpwHd" type="text" value="618,63" />
+			<p class="beschriftung"> kg/s - Massenstrom Speisewasser, Hochdruck</p>
+	  </div>
+	  <div>
+	    <label for="hhdEin">h<sub>ND1</sub>= </label>
+			<input id="hhdEin" type="text" value="827,91" />
+			<p class="beschriftung"> kJ/kg - Enthalpie Speisewasser, Eintritt HD</p>
+	  </div>
+		<div>
+	    <label for="hhdAus">h<sub>HD2</sub>= </label>
+			<input id="hhdAus" type="text" value="1070,30" />
+			<p class="beschriftung"> kJ/kg - Enthalpie Speisewasser, Austritt HD</p>
+	  </div>
+  </div>
+	<div id="foot" ><img src="background_html_klein.png"  alt="" /></div>
+</div>
+
+</body>
+</html>

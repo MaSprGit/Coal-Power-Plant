@@ -1,0 +1,342 @@
+<!DOCTYPE html
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="de_DE" lang="de_DE" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Elektrofilter</title>
+
+<style type="text/css">
+
+body {      font-family: Verdana;
+		 				margin-top: 0px;	
+						margin-left: 0px;		 
+		 				background: #ffffff url(background_neu.png) center top repeat-x; }
+
+#content {	width: 950px;
+						margin: auto; }
+#contentImage {
+						position: absolute;
+						width: 950px;
+						height: 660px;
+						box-shadow: 0px 2px 15px #000000;
+						background: #D7D882  url(elektro.png) 150px 340px no-repeat;	 }
+						
+#foot			{ position:absolute;
+						width: 950px; 
+						height: 20px; 
+						overflow: hidden;
+						margin: auto;
+						margin-top: 660px;
+						box-shadow: 0px -2px 15px #000000; }
+#deck			{ position:absolute;
+						width: 950px; 
+						height: 20px; 
+						overflow: hidden;
+						margin: auto;
+						margin-top: 140px;
+						box-shadow: 0px 2px 15px #000000; }	
+						
+label 		{ position: absolute;
+						float: left;
+						margin-left: 10px; }
+input[type=text] {
+						width: 50px;
+						position: absolute;
+						text-align: right;
+						margin-left: 65px;
+						border-radius: 5px; }					
+.beschriftung {
+						margin-left: 130px;}	
+											
+#header {
+						position: absolute;
+						width: 950px;
+						height: 140px;		
+						color: #ffffff; 						
+						border: none;
+						background: url(header_back_neu.jpg) center no-repeat; }
+#header h2 {padding-left:10px;
+					 	text-shadow: 2px 2px 5px #000000; }	
+#einleitung {
+						position: absolute;
+						margin-top: 90px;
+						width: 940px;
+						height: 50px;
+						padding-left: 10px;
+						padding-top: 5px;
+						font-size: 14px;
+						font-style: italic; }
+#einleitungBack {
+						position: absolute;
+						margin-top: 90px;
+						width: 950px;
+						height: 50px;
+						background-color: white;
+						opacity: 0.8; }							
+#anleitung1 {
+						position: relative;
+						float: left;
+						margin-top: 170px;
+						margin-left: 25px;
+						font-variant: small-caps;
+						font-weight: bold;
+						color: #4d0600;}
+#anleitung2 {
+						position: relative;
+						float: right;
+						margin-top: 170px;
+						margin-right: 50px;
+						font-variant: small-caps;
+						font-weight: bold;
+						color: #4d0600; }
+						
+#datenLabel {
+						position: absolute;
+						margin-top: 200px;
+						text-align: center;
+						font-size: 13px;
+  					padding: 5px;
+						width: 220px;
+						background-color: #9c0200;
+						border: none;
+						border-radius: 5px;
+						box-shadow: 0px 5px 15px #3D1010; }
+#datenLabel:hover {
+						background-color: #4d0600;
+						color: #fff60b;
+						cursor: pointer; }
+												
+#ergebnisBerechnung {
+						position:absolute;
+						background-color: #9c0200;
+						margin-top: 200px;
+						margin-left: 680px;
+						width: 260px;
+						font-size: 13px;					
+						padding: 5px;
+						padding-top: 0;
+						border: none;
+						border-radius: 5px;
+						box-shadow: 0px 5px 15px #3D1010;}									
+												
+#datenMain {
+						margin-top: 320px;
+						width: 500px;						
+						display: none; }
+#datenMainBackground {
+						margin-top: 320px;
+						width: 500px;
+						height: 190px;
+						display: none;	}		
+																			
+.kAngaben {
+						position: relative;
+						float: right;
+						width: 140px;					
+						border-radius: 5px;
+						font-size: 15px;
+						background-color: #000000;
+						color: #ff6100;
+						text-align: center; }
+.kAngaben:hover {
+						cursor: pointer; }	
+																						
+.close {		color: #FF0000;      																	 					    
+						background-color: #000000;					
+						font-size: 20px;					
+						width: 27px;
+						margin: 0px;
+						padding: 0px;
+						text-align: center;
+						border-radius: 5px;
+						border: 2px solid;
+						position: relative;
+						float: right; }
+.close:hover {
+						cursor: pointer; }	
+						
+#rauchgas {
+					  margin-top: 320px;
+						margin-left: 520px;
+						width: 380px;									
+						display: none; }
+#rauchgasBackground {
+						display: none;
+						margin-top: 320px;
+						margin-left: 520px;
+						width: 380px;
+						height: 210px; }																						
+
+#berechnenButton {
+						text-align: center;
+						float: right; }
+																			
+#berechnenButtonZus {
+						margin-left: 60px;
+						margin-top: 10px; }	
+											
+.backgroundEingaben {
+						background-color: #4d0600;
+						position: absolute;
+						opacity: 0.9;
+   					filter:Alpha(Opacity=90);
+						border: none;
+						border-radius: 5px;
+						box-shadow: 0px 5px 15px #3D1010; }									
+.eingaben { border: none;
+						position: absolute;
+						border-radius: 5px;
+						font-size: 80%;
+						color: #fff60b;	}
+.eingaben h3 {
+						margin: 10px 0 0 10px;
+						color: #ff6100; }
+						
+.berButton {border-radius: 5px;
+						font-size: 15px;
+						background-color: #000000;
+						color: #ff6100;
+						text-align: center; }
+.berButton:hover {
+					  cursor: pointer; }					  
+						
+</style> 
+<script type="text/javascript" src="formeln_elektro.js"></script>
+<script type="text/javascript" src="dynamik_elektro.js"></script>
+
+<script type="text/javascript" src="footer.js"></script>
+<link rel="stylesheet" href="footer.css" type="text/css" />
+
+<link rel="stylesheet" href="navi.css" type="text/css" />
+</head>
+
+<body>
+<!-- Navigation -->
+<a href="schwefel.htm"><img id="navi_vor" src="navi_vor.png" height="50" alt="weiter" /></a>
+<a href="speisewasser.htm"><img id="navi_back" src="navi_back.png" height="50" alt="back"  /></a>
+<a href="home.htm"><img id="navi_home" src="navi_home.png" height="50" alt="startzeite" /></a>
+
+<!-- Footer mit Impressum -->
+	<img id="footer_button" src="footer_button.png" height="50" onclick="footer()" alt="" />
+  <img id="footer_button_minus" src="footer_button_minus.png" height="50" onclick="footerMinus()" alt="" />
+  <div id="footer_content">
+  	<div id="footer_all">
+  	  <div id="footer_top">
+  		  <div id="footer_logo">
+  			<a href="http://www.fh-trier.de" target="_blank"><img src="logo_fh.png" height="30" alt="" /> Fachhochschule Trier</a>
+  			</div>
+  			<div id="footer_impressum">
+  			  <p onmouseover="impressum()" onmouseout="impressumOut()">Impressum</p>
+  			</div>
+  		</div>
+  		<div id="footer_info">
+  		  <div id="footer_copy">
+  			  <p>Copyright &#169; 2012 Markus Springer. All rights reserved.<br />
+  				   mail to: <a href="mailto:springem@fh-trier.de">Webmaster</a></p>
+  			</div>
+  			<div id="footer_name">
+  			<p>Kraftwerkstechnik, Luftreinhaltung WS 2011/12<br />
+  			   Kohlekraftwerk Ibbenbüren - RWE Power AG</p>
+  			</div>
+  		</div>
+  	<div id="impressum">
+    	<h3>Projektarbeit der Vorlesung Kraftwerkstechnik und Luftreinhaltung WS-2011/12<br />
+    	   im Masterstudiengang Gebäude- und Energiemanagement</h3>
+    	<p>erstellt von:<br />
+				 Markus Springer<br />
+    		 Christian Lübeck</p>
+  	</div>
+		</div>	
+  </div>	
+<!-- Inhalt -->
+<div id="content" >
+  <div id="contentImage"></div>
+	
+	<div id="header">
+    <h2>Elektrofilter</h2>
+  </div>
+	<div id="einleitungBack"></div>
+	<p id="einleitung">Die Entstaubung des Rauchgases erfolgt durch Elektrofilter. Beim durchströmen der Filter laden sich die Staubpartikel im elektrischen Feld auf und haften an den Filterflächen an. Durch Rütteln fallen die Staubteilchen in den Staubbehälter.</p>
+	
+	<div id="deck" ><img src="background_html_klein.png"  alt="" /></div>
+	<p id="anleitung1">1. Dateneingabe!</p>
+	<p id="anleitung2">2. Berechnung starten!</p>
+	
+	<div id="datenLabel" onclick="eingaben()">
+	  <h3>Rauchgaszustand und Filterdaten</h3>
+    <p>Geben Sie hier die Daten ein:</p>
+  </div >
+	
+	<div id="ergebnisBerechnung">																                
+    <h3>Elektrodenfläche<input class="berButton" id="berechnenButton" type="button" value="Berechnen!" onclick="aEl();aQ()" /></h3>
+	  <div>
+	    <label for="aEl">A<sub>el</sub> = </label>
+			<input id="aEl" type="text"  />
+			<p class="beschriftung"> m<sup>2</sup></p>
+		</div>
+		<h3>Filterquerschnitt</h3>
+		<div>
+		  <label for="aq">A<sub>Q</sub> = </label>
+		  <input id="aq" type="text"  />
+			<p class="beschriftung"> m<sup>2</sup></p>
+	  </div>
+  </div>
+				 <!-- Werte Elektrofilter-->
+  <div id="datenMainBackground" class="backgroundEingaben"></div>
+	<div id="datenMain" class="eingaben">					 	 									 								 					 
+ 	  <div><input class="close" type="button" value="X" onclick="closeDiv('datenMain');closeDiv('rauchgas')" /></div>
+		<div>
+	    <label for="trg">&#977;<sub>RG</sub> = </label>
+		  <input id="trg" type="text" value="140,0" />
+			<p class="beschriftung">°C - Temperatur Rauchgas, Eintritt</p>
+	  </div>
+		<div>
+	    <label for="vrg">v<sub>RG</sub> = </label>
+			<input id="vrg" type="text" value="1,5" />
+			<p class="beschriftung"> m/s - Rauchgasgeschwindigkeit</p>
+	  </div>
+		<div>
+	    <label for="nvrg">V<sub>N<sub>RG</sub></sub> = </label>
+			<input id="nvrg" type="text" value="499,52" />
+			<p class="beschriftung">Nm<sup>3</sup>/s - Rauchgasvolumenstrom,<input class="kAngaben" type="button" value="Keine&#32;Angaben?" onclick="vRG()" /><br />Normalzustand</p>
+	  </div>	
+		<div>
+	    <label for="mg">&#969;<sub>El</sub> = </label>
+			<input id="mg" type="text" value="0,16" />
+			<p class="beschriftung"> m/s - Migrationsgeschwindigkeit</p>
+	  </div>
+  	<div>
+	    <label for="wel">&#x192;<sub>El</sub> = </label>
+		  <input id="wel" type="text" value="99" />
+			<p class="beschriftung">&#37; - Wirkungsgrad der Entstaubung</p>
+	  </div>
+	</div>
+	
+	<!-- Volumen Rauchgas -->	 
+	<div id="rauchgasBackground" class="backgroundEingaben"></div>
+ 	<div id="rauchgas" class="eingaben">																 			 					
+      <input class="close" type="button" value="X" onclick="closeDiv('rauchgas')" />
+  	  <h3>Rauchgasvolumenstrom, Norm V<sub>N<sub>RG</sub></sub></h3>
+			<hr />
+			<div>
+		  	<label for="mKohle">&#7745;<sub>B</sub> = </label>
+			  <input id="mKohle" type="text" value="64,722" />
+			  <p class="beschriftung"> kg/s - Brennstoffmassenstrom</p>
+      </div>
+			<div>
+	    <label for="hKohle">H<sub>K</sub> = </label>
+		  <input id="hKohle" type="text" value="30,58" />
+			<p class="beschriftung">MJ/kg - Heizwert der Kohle</p>
+	  </div>											 					 						
+	    <input class="berButton" id="berechnenButtonZus" type="button" value="Berechnen!" onclick="nvRG()" />    
+			<div>
+	      <label for="nvrgBer">V<sub>N<sub>RG</sub></sub> = </label>
+			  <input id="nvrgBer" type="text" value="" />
+			  <p class="beschriftung">Nm<sup>3</sup>/s - Rauchgasvolumen, Normalzustand</p>
+	    </div>
+  </div>
+			 											 															 	 
+	<div id="foot" ><img src="background_html_klein.png"  alt="" /></div>
+</div>
+</body>
+</html>

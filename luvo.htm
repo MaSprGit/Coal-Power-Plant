@@ -1,0 +1,410 @@
+<!DOCTYPE html
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="de_DE" lang="de_DE" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Luftvorwärmer</title>
+<style type="text/css">
+body { 	    font-family: Verdana;
+		 				margin-top: 0px;	
+						margin-left: 0px;	
+		 				background: #ffffff url(background_neu.png) center top repeat-x;}
+					
+#content {	width: 950px;
+						margin: auto; }
+#contentImage {
+						position: absolute;
+						width: 950px;
+						height: 660px;
+						box-shadow: 0px 2px 15px #000000;
+						background: #D7D882  url(luvo.png) 310px 250px no-repeat;}
+						
+#header {
+						position: absolute;
+						width: 950px;
+						height: 140px;		
+						color: #ffffff; 						
+						border: none;
+						background: url(header_back_neu.jpg) center no-repeat; }
+#header h2 {padding-left:10px;
+					 	text-shadow: 2px 2px 5px #000000; }	
+						
+#foot			{ position:absolute;
+						width: 950px; 
+						height: 20px; 
+						overflow: hidden;
+						margin: auto;
+						margin-top: 660px;
+						box-shadow: 0px -2px 15px #000000; }
+#deck			{ position:absolute;
+						width: 950px; 
+						height: 20px; 
+						overflow: hidden;
+						margin: auto;
+						margin-top: 140px;
+						box-shadow: 0px 2px 15px #000000; }		
+												
+#einleitung {
+						position: absolute;
+						margin-top: 90px;
+						width: 930px;
+						height: 50px;
+						padding-left: 10px;
+						padding-right: 10px;
+						padding-top: 5px;
+						font-size: 90%;
+						font-style: italic; }
+						
+#einleitungBack {
+						position: absolute;
+						margin-top: 90px;
+						width: 950px;
+						height: 50px;
+						background-color: white;
+						opacity: 0.75; }	
+															
+.anleitung {position: absolute;			 						 /*Beschriftungen*/
+					 	font-variant: small-caps;
+						font-weight: bold;
+						color: #4d0600; }
+#anleitung1 {			 					 				 						 
+						margin-top: 190px;
+						margin-left: 20px; }						
+#anleitung2 {
+						margin-top: 190px;
+						margin-left: 700px; }
+																	
+#werteEingabe {															/*Rote Label-Felder*/
+						text-align: center;
+						margin-top: 220px;											
+						width: 220px;
+						box-shadow: 0px 5px 15px #3D1010;}
+#werteEingabe:hover {
+						background-color: #4d0600;
+						color: #fff60b;
+						cursor: pointer; }
+												
+#berechnung {
+						margin-top: 220px;
+						margin-left: 680px;
+						padding-top: 0;
+						width: 260px;
+						box-shadow: 0px 5px 15px #3D1010; }																 
+						
+.label    { position: absolute;						/*Eingabefelder*/
+						padding: 5px;
+						font-size: 80%;	
+						background-color: #9c0200;
+						border: none;		
+						border-radius: 5px;	}						
+label 		{ position: absolute;	 								 
+						float: left;
+						margin-left: 10px; }						
+input[type=text] {
+						width: 50px;
+						position: absolute;
+						margin-left: 55px;
+						border-radius: 5px;
+						text-align: right; }			
+#ebene1 input[type=text] {
+						width: 50px;
+						position: absolute;
+						margin-left: 60px;
+						border-radius: 5px;
+						text-align: right; }										
+.beschriftung {
+						margin-left: 120px;}	
+																	
+
+													
+.eingaben { border: none;		 								/*Eingaben-Klasse mit Background*/
+						position: absolute;
+						border-radius: 5px;
+						font-size: 80%;
+						color: #fff60b;	}
+.eingaben h3 {
+						margin: 10px 0 0 10px;
+						color: #ff6100; }
+.eingabenBackground {
+						background-color: #4d0600;
+						position: absolute;
+						opacity: 0.9;
+						border: none;
+						border-radius: 5px;
+						box-shadow: 0px 5px 15px #3D1010; }	
+						
+#ebene1	{				 					 					 						/*Eingabefelder*/										
+						margin-top: 360px;
+						width: 480px;					
+						display: none; }
+#ebene1Background {
+						margin-top: 360px;
+						width: 480px;
+						height: 220px;
+						display: none;	}	
+						
+#ebene2  {  margin-top: 360px;
+						margin-left: 510px;
+						width: 350px;									
+						display: none; }
+#ebene2Background {
+						display: none;
+						margin-top: 360px;
+						margin-left: 510px;
+						width: 350px;
+						height: 230px; }
+															
+#ebene3 {   margin-top: 360px;
+						margin-left: 510px;
+						width: 350px;									
+						display: none; }
+#ebene3Background {
+						margin-top: 360px;
+						margin-left: 510px;
+						width: 350px;
+						height: 230px;
+						display: none; }
+
+
+#berButtonLabel {														/*Buttons */							
+						border-radius: 5px;
+						font-size: 15px;
+						background-color: #000000;
+						color: #ff6100;
+						text-align: center;
+						float: right; }	
+#berButtonLabel:hover {		
+            cursor: pointer; }	
+.berechnenButton {
+						border-radius: 5px;
+						font-size: 15px;
+						background-color: #000000;
+						color: #ff6100;
+						text-align: center;
+						margin-left: 55px; }	
+.berechnenButton:hover {		
+            cursor: pointer; }	
+																	
+.kAngaben {
+						position: relative;
+						float: right;
+						width: 140px;					
+						border-radius: 5px;
+						font-size: 15px;
+						background-color: #000000;
+						color: #ff6100;
+						text-align: center; }
+.kAngaben:hover {
+						cursor: pointer; }						
+
+.close {		color: #FF0000;      																	 					    /*Schließ-Knopf*/	
+						background-color: #000000;					
+						font-size: 20px;					
+						width: 27px;
+						margin: 0px;
+						padding: 0px;
+						text-align: center;
+						border-radius: 5px;
+						border: 2px solid;
+						position: relative;
+						float: right; }
+.close:hover {
+						cursor: pointer; }											
+					
+</style>
+<script type="text/javascript" src="formeln_luvo.js"></script>
+<script type="text/javascript" src="dynamik_luvo.js"></script>
+
+<script type="text/javascript" src="footer.js"></script>
+<link rel="stylesheet" href="footer.css" type="text/css" />
+
+<link rel="stylesheet" href="navi.css" type="text/css" />
+</head>
+
+<body>
+<!-- Navigation -->
+<a href="brennkammer.htm"><img id="navi_vor" src="navi_vor.png" height="50" alt="" /></a>
+<a href="kohletrocknung.htm"><img id="navi_back" src="navi_back.png" height="50" alt="" /></a>
+<a href="home.htm"><img id="navi_home" src="navi_home.png" height="50" alt="" /></a>
+
+<div id="content">
+  <div id="contentImage"></div>
+  <div id="header">
+	  <h2>Luftvorwärmung</h2>
+  </div>
+  <div id="einleitungBack"></div>
+	<p id="einleitung">Im LuVo wird die Verbrennungsluft und der Trocknungsmittelmassenstrom mithilfe des Rauchgases vorgewärmt. Der LuVo ist als Regenerativ-Wärmetauscher mit einer rotierenden Speichermasse ausgeführt.</p>
+	
+	<div id="deck" ><img src="background_html_klein.png"  alt="" /></div>
+	<p id="anleitung1" class="anleitung">1.&nbsp;Dateneingabe!</p>
+	<p id="anleitung2" class="anleitung">2.&nbsp;Berechnung&nbsp;starten!</p>
+
+	<div class="label" id="werteEingabe" onclick="eingaben()">
+    <h3>Werte für Luft und Rauchgas</h3>
+    <p>Geben Sie hier die notwendigen Daten ein:</p>
+  </div>
+	
+	<!-- Berechnung Starten -->
+	<div class="label" id="berechnung">
+    <h3>Geometrie <input id="berButtonLabel" type="button" value="Berechnen!" onclick="durchm();aheiz()" /><br />
+		    der Speichermasse</h3>
+		<div>		 
+	    <label for="durchm">d = </label>
+			<input id="durchm" type="text" value="" />
+			<p class="beschriftung"> m - Durchmesser</p>
+		</div>
+		<div>		 
+	    <label for="ageom">A = </label>
+			<input id="ageom" type="text" value="" />
+			<p class="beschriftung"> m<sup>2</sup> - Kreisfläche</p>
+		</div>
+		<h3>Heizfläche</h3>
+		<div>		
+      <label for="aheiz" >A<sub>Q</sub> = </label>
+			<input id="aheiz" type="text" value="" />	
+			<p class="beschriftung"> m<sup>2</sup></p>		
+		</div>
+		<h3>übertragener Wärmestrom</h3>
+		<div>		
+      <label for="qheiz" >Q = </label>
+			<input id="qheiz" type="text" value="" />	
+			<p class="beschriftung"> MJ</p>		
+		</div>
+  </div>
+	
+		<!-- Daten für Brennkammerendtemp. -->
+  <div class="eingabenBackground" id="ebene1Background"></div>								
+  <div class="eingaben" id="ebene1">
+    <div><input class="close" type="button" value="X" onclick="closeDiv('ebene1'); closeDiv('ebene2'); closeDiv('ebene3');" /></div>	
+		<div>
+	    <label for="tempRG1">&#977;<sub>RG1</sub> = </label>
+			<input id="tempRG1" type="text" value="400" />
+			<p class="beschriftung">°C - Temperatur Rauchgas vor LuVo</p>
+	  </div>	
+		<div>
+	    <label for="tempRG2">&#977;<sub>RG2</sub> = </label>
+			<input id="tempRG2" type="text" value="140" />
+			<p class="beschriftung">°C - Temperatur Rauchgas nach LuVo</p>
+	  </div>	
+		<div>
+	    <label for="massRG">&#7745;<sub>RG</sub> = </label>
+			<input id="massRG" type="text" value="800,41" />
+			<p class="beschriftung">kg/s - Rauchgasmassenstrom <input class="kAngaben" type="button" value="Keine&#32;Angaben?" onclick="rauchgas()" /></p>
+	  </div>	
+		<div>
+	    <label for="tempHL1">&#977;<sub>HL1</sub> = </label>
+			<input id="tempHL1" type="text" value="350" />
+			<p class="beschriftung">°C - Temperatur Heißluft vor LuVo</p>
+	  </div>	
+		<div>
+	    <label for="tempHL2">&#977;<sub>HL2</sub> = </label>
+			<input id="tempHL2" type="text" value="25" />
+			<p class="beschriftung">°C - Temperatur Heißluft nach LuVo</p>
+	  </div>
+		<div>
+	    <label for="massHL">&#7745;<sub>HL</sub> = </label>
+			<input id="massHL" type="text" value="762,05" />
+			<p class="beschriftung">kg/s - Heißluftmassenstrom <input class="kAngaben" type="button" value="Keine&#32;Angaben?" onclick="heissluft()" /></p>
+	  </div>	
+		<div>
+	    <label for="massLv">&#7745;<sub>Leck</sub>= </label>
+			<input id="massLv" type="text" value="38,10" />
+			<p class="beschriftung">kg/s - Leckagestrom</p>
+	  </div>
+  </div>
+			
+<!-- Rauchgasmenge -->
+  <div class="eingabenBackground" id="ebene2Background"></div>					
+	<div class="eingaben" id="ebene2">
+    <div><input class="close" type="button" value="X" onclick="closeDiv('ebene2')" /></div>
+		<h3>Rauchgasmenge &#7745;<sub>RG</sub></h3>
+		<hr />
+		<div>
+	    <label for="hKohle">H<sub>K</sub> = </label>
+		  <input id="hKohle" type="text" value="30,58" />
+			<p class="beschriftung">MJ/kg - Heizwert der Kohle</p>
+	  </div>			
+		<div>
+	    <label for="mKohle">&#7745;<sub>K</sub> = </label>
+		  <input id="mKohle" type="text" value="64,722" />
+			<p class="beschriftung">kg/s - Massenstrom der Kohle<br />(ohne Primärluft)</p>
+	  </div>	
+		<div>
+	    <label for="nluft">n<sub>L</sub> = </label>
+			<input id="nluft" type="text" value="1,15" />
+			<p class="beschriftung"> - Luftverhältnis der Verbrennung</p>
+	  </div>								 					 						
+		<input class="berechnenButton" type="button" value="Berechnen!" onclick="rauchgasBer()" />
+		<div>
+		  <label for="mRgBer">&#7745;<sub>RG</sub> = </label>
+			<input id="mRgBer" type="text" value=""  />
+			<p class="beschriftung">kg/s - Rauchgasmassenstrom</p>
+		</div>
+  </div>
+	
+<!-- Heißluftmenge -->
+  <div class="eingabenBackground" id="ebene3Background"></div>					
+	<div class="eingaben" id="ebene3">
+    <div><input class="close" type="button" value="X" onclick="closeDiv('ebene3')" /></div>
+		<h3>Heißluftmenge &#7745;<sub>HL</sub></h3>
+		<hr />
+		<div>
+	    <label for="hKohle1">H<sub>K</sub> = </label>
+		  <input id="hKohle1" type="text" value="30,58" />
+			<p class="beschriftung">MJ/kg - Heizwert der Kohle</p>
+	  </div>			
+		<div>
+	    <label for="mKohle1">&#7745;<sub>K</sub> = </label>
+		  <input id="mKohle1" type="text" value="64,722" />
+			<p class="beschriftung">kg/s - Massenstrom der Kohle<br />(ohne Primärluft)</p>
+	  </div>	
+		<div>
+	    <label for="nluft1">n<sub>L</sub> = </label>
+			<input id="nluft1" type="text" value="1,15" />
+			<p class="beschriftung"> - Luftverhältnis der Verbrennung</p>
+	  </div>								 					 						
+		<input class="berechnenButton" type="button" value="Berechnen!" onclick="heissluftBer()" />
+		<div>
+		  <label for="mHLBer">&#7745;<sub>HL</sub> = </label>
+			<input id="mHLBer" type="text" value=""  />
+			<p class="beschriftung">kg/s - Heißluftmassenstrom</p>
+		</div>
+  </div>
+	
+	
+	<div id="foot" ><img src="background_html_klein.png"  alt="" /></div>
+</div>
+<!-- Footer mit Impressum -->
+	<img id="footer_button" src="footer_button.png" height="50" onclick="footer()" alt="" />
+  <img id="footer_button_minus" src="footer_button_minus.png" height="50" onclick="footerMinus()" alt="" />
+  <div id="footer_content">
+  	<div id="footer_all">
+  	  <div id="footer_top">
+  		  <div id="footer_logo">
+  			<a href="http://www.fh-trier.de" target="_blank"><img src="logo_fh.png" height="30" alt="" /> Fachhochschule Trier</a>
+  			</div>
+  			<div id="footer_impressum">
+  			  <p onmouseover="impressum()" onmouseout="impressumOut()">Impressum</p>
+  			</div>
+  		</div>
+  		<div id="footer_info">
+  		  <div id="footer_copy">
+  			  <p>Copyright &#169; 2012 Markus Springer. All rights reserved.<br />
+  				   mail to: <a href="mailto:springem@fh-trier.de">Webmaster</a></p>
+  			</div>
+  			<div id="footer_name">
+  			<p>Kraftwerkstechnik, Luftreinhaltung WS 2011/12<br />
+  			   Kohlekraftwerk Ibbenbüren - RWE Power AG</p>
+  			</div>
+  		</div>
+  	<div id="impressum">
+    	<h3>Projektarbeit der Vorlesung Kraftwerkstechnik und Luftreinhaltung WS-2011/12<br />
+    	   im Masterstudiengang Gebäude- und Energiemanagement</h3>
+    	<p>erstellt von:<br />
+				 Markus Springer<br />
+    		 Christian Lübeck</p>
+  	</div>
+		</div>	
+  </div>	
+</body>
+</html>

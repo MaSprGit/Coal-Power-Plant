@@ -1,0 +1,46 @@
+#navi_vor {
+						opacity: 0.7;
+						border: 0;
+            cursor: pointer;
+            position: fixed;
+						border-radius: 10px;
+						top: 10px;
+            right: 80px;
+						z-index: 3;
+						box-shadow: -2px -2px 15px #000000;
+						box-shadow: 2px 2px 15px #000000; }
+							
+#navi_vor:hover {
+						opacity: 1; }
+
+#navi_home {
+						opacity: 0.7;
+						border: 0;
+            cursor: pointer;
+            position: fixed;
+						border-radius: 10px;
+						top: 10px;
+            right: 140px;
+						z-index: 3;
+						box-shadow: -2px -2px 15px #000000;
+						box-shadow: 2px 2px 15px #000000; }
+							
+#navi_home:hover {
+						opacity: 1; }								
+						
+#navi_back {
+						opacity: 0.7;
+						border: 0;
+            cursor: pointer;
+            position: fixed;
+						border-radius: 10px;
+						top: 10px;
+            right: 200px;
+						z-index: 3;
+						box-shadow: -2px -2px 15px #000000;
+						box-shadow: 2px 2px 15px #000000; }
+							
+#navi_back:hover {
+						opacity: 1; }
+
+				

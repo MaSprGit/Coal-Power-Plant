@@ -1,0 +1,397 @@
+<!DOCTYPE html
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="de_DE" lang="de_DE" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Vorbereitung der Kohle</title>
+
+<style type="text/css">
+
+body {      font-family: Verdana;
+		 				margin-top: 0px;	
+						margin-left: 0px;	 
+		 				background: #ffffff url(background_neu.png) center top repeat-x; }
+		
+#content {	width: 950px;
+						margin: auto; }
+#contentImage {
+						position: absolute;
+						width: 950px;
+						height: 660px;
+						box-shadow: 0px 2px 15px #000000;
+						background: #D7D882  url(kohlemuele.png) 175px 300px no-repeat;	 }
+											
+#header {
+						position: absolute;
+						width: 950px;
+						height: 140px;		
+						color: #ffffff; 						
+						border: none;
+						background: url(header_back_neu.jpg) center no-repeat; }
+#header h2 {padding-left:10px;
+					 	text-shadow: 2px 2px 5px #000000; }		
+	
+#einleitung {
+						position: absolute;
+						margin-top: 90px;
+						width: 930px;
+						height: 50px;
+						padding-left: 10px;
+						padding-right: 10px;
+						padding-top: 5px;
+						font-size: 90%;
+						font-style: italic; }
+						
+#einleitungBack {
+						position: absolute;
+						margin-top: 90px;
+						width: 950px;
+						height: 50px;
+						background-color: white;
+						opacity: 0.75; }						
+#anleitung1 {
+						position: relative;
+						float: left;
+						margin-top: 170px;
+						font-variant: small-caps;
+						font-weight: bold;
+						color: #4d0600;}
+#anleitung2 {
+						position: relative;
+						float: right;
+						margin-top: 170px;
+						margin-right: 50px;
+						font-variant: small-caps;
+						font-weight: bold;
+						color: #4d0600; }
+						
+label 		{ position: absolute;
+						float: left;
+						margin-left: 10px; }
+						
+input[type=text] {
+						width: 50px;
+						position: absolute;
+						margin-left: 55px;
+						border-radius: 5px;
+						text-align: right; }					
+.beschriftung {
+						margin-left: 120px;}	
+					
+#kohleZufuhr {
+						position: absolute;
+						margin-top: 200px;
+						text-align: center;
+						font-size: 80%;
+  					padding: 5px;
+						width: 200px;
+						background-color: #9c0200;
+						border: none;
+						border-radius: 5px;
+						box-shadow: 0px 5px 15px #3D1010; }
+#kohleZufuhr:hover {
+						background-color: #4d0600;
+						color: #fff60b;
+						cursor: pointer; }
+						
+#Berechnung {
+						position:absolute;
+						background-color: #9c0200;
+						margin-top: 200px;
+						margin-left: 680px;
+						width: 260px;
+						font-size: 80%;					
+						padding: 5px;
+						border: none;
+						border-radius: 5px;
+						box-shadow: 0px 5px 15px #3D1010;}	
+																								
+#datenKohle {
+						margin-top: 320px;
+						width: 490px;					
+						display: none; }
+#datenKohleBackground {
+						margin-top: 320px;
+						width: 490px;
+						height: 240px;
+						display: none;	}		
+																		
+.kAngaben {	position: relative;
+						float: right;
+						width: 140px;					
+						border-radius: 5px;
+						font-size: 15px;
+						background-color: #000000;
+						color: #ff6100;
+						text-align: center; }
+.kAngaben:hover {
+						cursor: pointer; }	
+																	
+#mkEingaben {	  																 /*Eingabefeld Kohlemassenstrom*/
+						margin-top: 320px;
+						margin-left: 510px;
+						width: 370px;									
+						display: none; }
+#mkEingabenBackground {					
+						margin-top: 320px;
+						margin-left: 510px;
+						width: 370px;
+						height: 220px;
+						display: none; }
+
+#cpKohleBerechnung {			 		 									 /*Eingabefeld für cp Kohle-Daten*/						 
+						margin-top: 320px;
+						margin-left: 510px;
+						width: 370px;									
+						display: none; }
+#cpKohleBerechnungBackground {
+						margin-top: 320px;
+						margin-left: 510px;
+						width: 370px;
+						height: 190px;						
+						display: none; }	
+	
+#datenHeissluft {		 			 											 /*Eingabefeld für Heißluft*/
+						margin-top: 320px;
+ 						width: 380px;					
+						display: none; }
+#datenHeissluftBackground {
+						margin-top: 320px;
+						width: 380px;
+						height: 110px;
+						display: none;}		
+																																	
+.close {		color: #FF0000;      																	 					    /*Schließ-Knopf*/	
+						background-color: #000000;					
+						font-size: 20px;					
+						width: 27px;
+						margin: 0px;
+						padding: 0px;
+						text-align: center;
+						border-radius: 5px;
+						border: 2px solid;
+						position: relative;
+						float: right; }
+.close:hover {
+						cursor: pointer; }	
+
+.berechnenButton {
+						border-radius: 5px;
+						font-size: 15px;
+						background-color: #000000;
+						color: #ff6100;
+						text-align: center;
+						float: right;	}						
+.berechnenButton:hover {		
+            cursor: pointer; }
+											 												
+.eingabenBackground {
+						background-color: #4d0600;
+						position: absolute;
+						opacity: 0.9;
+						border-radius: 5px;
+						box-shadow: 0px 5px 15px #3D1010; }									
+.eingaben { position: absolute;
+						border-radius: 5px;
+						border: 0px;
+						font-size: 80%;
+						color: #fff60b;	}
+.eingaben h3 {
+						margin: 10px 0 0 10px;
+						color: #ff6100; }
+						
+#deck			{ position:absolute;
+						width: 950px; 
+						height: 20px; 
+						overflow: hidden;
+						margin: auto;
+						margin-top: 140px;
+						box-shadow: 0px 2px 15px #000000; }	
+#foot			{ position:absolute;
+						width: 950px; 
+						height: 20px; 
+						overflow: hidden;
+						margin: auto;
+						margin-top: 660px;
+						box-shadow: 0px -2px 15px #000000; }		
+										
+</style> 
+<script type="text/javascript" src="formeln_kohle.js"></script>
+<script type="text/javascript" src="dynamik_kohle.js"></script>
+
+<script type="text/javascript" src="footer.js"></script>
+<link rel="stylesheet" href="footer.css" type="text/css" />
+
+<link rel="stylesheet" href="navi.css" type="text/css" />
+</head>
+<body>
+<!-- Navigation -->
+<a href="luvo.htm"><img id="navi_vor" src="navi_vor.png" height="50" alt="weiter" /></a>
+<a href="home.htm"><img id="navi_home" src="navi_home.png" height="50" alt="Startseite" /></a>
+
+
+  <!-- Footer mit Impressum -->
+	<img id="footer_button" src="footer_button.png" height="50" onclick="footer()" alt="Impressum" />
+  <img id="footer_button_minus" src="footer_button_minus.png" height="50" onclick="footerMinus()" alt="noImpressum" />
+  <div id="footer_content">
+  	<div id="footer_all">
+  	  <div id="footer_top">
+  		  <div id="footer_logo">
+  			<a href="http://www.fh-trier.de" target="_blank"><img src="logo_fh.png" height="30" alt="" /> Fachhochschule Trier</a>
+  			</div>
+  			<div id="footer_impressum">
+  			  <p onmouseover="impressum()" onmouseout="impressumOut()">Impressum</p>
+  			</div>
+  		</div>
+  		<div id="footer_info">
+  		  <div id="footer_copy">
+  			  <p>Copyright &#169; 2012 Markus Springer. All rights reserved.<br />
+  				   mail to: <a href="mailto:springem@fh-trier.de">Webmaster</a></p>
+  			</div>
+  			<div id="footer_name">
+  			<p>Kraftwerkstechnik, Luftreinhaltung WS 2011/12<br />
+  			   Kohlekraftwerk Ibbenbüren - RWE Power AG</p>
+  			</div>
+  		</div>
+  	<div id="impressum">
+    	<h3>Projektarbeit der Vorlesung Kraftwerkstechnik und Luftreinhaltung WS-2011/12<br />
+    	   im Masterstudiengang Gebäude- und Energiemanagement</h3>
+    	<p>erstellt von:<br />
+				 Markus Springer<br />
+    		 Christian Lübeck</p>
+  	</div>
+		</div>	
+  </div>	
+	<!-- Inhalt -->
+<div id="content" >
+  <div id="contentImage"></div>
+	
+	<div id="header">
+    <h2>Aufbereitung und Trocknung der Kohle</h2>
+  </div>
+	<div id="einleitungBack"></div>
+	<p id="einleitung">Die Kohle wird vor Einleitung in die Brennkammer sehr fein aufgemahlen und mit Heißluft getrocknet. Die Heißluft dient zudem als Transportmittel für die Kohlepartikel sowie als Primärluft für die Verbrennung.</p>
+	
+	<div id="deck" ><img src="background_html_klein.png"  alt="" /></div>
+	<p id="anleitung1">1. Dateneingabe!</p>
+	<p id="anleitung2">2. Berechnung starten!</p>
+	
+	<div id="kohleZufuhr" onclick="labelKohle()">
+	  <h3>Kohlezufuhr</h3>
+    <p>Geben Sie hier die Daten der Kohle ein:</p>
+  </div >
+
+	<!-- Berechnung Wärmestrom und Heißluft M-Strom -->
+	<div id="Berechnung">																                  
+    <h3>Trocknungs-<br />wärmestrom:<input class="berechnenButton" type="button" value="Berechnen!" onclick="wStrom();massHLuft()" /></h3>
+	  <div>
+	    <label for="wStrom">Q<sub>T</sub> = </label>
+			<input id="wStrom" type="text"  />
+			<p class="beschriftung"> MW </p>
+		</div>
+		<h3>Heißluftmassenstrom:</h3>
+		<div>
+		  <label for="massHLuft">&#7745;<sub>T</sub> = </label>
+		  <input id="massHLuft" type="text"  />
+			<p class="beschriftung"> kg/s  </p>
+	  </div>
+  </div>
+		 <!-- Dateneingabe -->
+  <div id="datenKohleBackground" class="eingabenBackground"></div>
+	<div id="datenKohle" class="eingaben">					 	 									 								 					 
+ 	  <div><input class="close" type="button" value="&#935;" onclick="closeDiv('datenKohle');closeDiv('mkEingaben');closeDiv('cpKohleBerechnung')" /></div>
+	  <div>
+		  <label for="kohleF" style="font-family: Times; font-size: 125%">&#947;<sub style="font-family: Verdana; font-size: 70%">W</sub> = </label>
+			<input id="kohleF" type="text" value="6,0" />
+    	<p class="beschriftung">&#37; - Wassergehalt Roh-Kohle</p>
+	  </div>
+	  <div>
+	    <label for="kohleRf" style="font-family: Times; font-size: 125%">&#947;<sub style="font-family: Verdana; font-size: 70%">zul</sub> = </label>
+			<input id="kohleRf" type="text" value="2,0" />
+  		<p class="beschriftung">&#37; - zulässige Restfeuchte Kohle, gemahlen</p>
+	  </div>
+		<div>
+	    <label for="tempKNach">&#977;<sub>2</sub> = </label>
+		  <input id="tempKNach" type="text" value="110,0" />
+			<p class="beschriftung">°C - Temperatur Kohlestaub</p>
+	  </div>
+		<div>
+	    <label for="mKohle">&#7745;<sub>K</sub> = </label>
+	  	<input id="mKohle" type="text" value="64,722" />
+	  	<p class="beschriftung">kg/s - Massenstrom Kohle <input class="kAngaben" type="button" value="Keine&#32;Angaben?" onclick="massKohle()" /></p>
+	  </div>
+    <div>
+	    <label for="swkKohle">c<sub>p<sub>K</sub></sub> = </label>
+			<input id="swkKohle" type="text" value="1,006" />
+			<p class="beschriftung">kJ/kgK - spez. Wärmekapazität<input class="kAngaben" type="button" value="Keine&#32;Angaben?" onclick="cpKohle()" /><br /> 
+				 									 der Kohle, trocken</p>
+	  </div>
+		<div>
+	    <label for="tempHLuft">&#977;<sub>T</sub> = </label>
+	  	<input id="tempHLuft" type="text" value="350,0" />
+	  	<p class="beschriftung">°C - Temperatur Heißluft</p>
+	  </div>
+		<div>
+	    <label for="cpHLuft">c<sub>p<sub>T</sub></sub> = </label>
+	  	<input id="cpHLuft" type="text" value="1,035" />
+	  	<p class="beschriftung">kJ/kgK - spez.Wärmekapazität der Heißluft</p>
+	  </div>	
+	</div>
+	<!-- Kohlemassenstrom berechnet -->	
+	<div id="mkEingabenBackground" class="eingabenBackground"></div>
+ 	<div id="mkEingaben" class="eingaben">																 			 					 
+    <input class="close" type="button" value="&#935;" onclick="closeDiv('mkEingaben')" />
+  	<h3>Kohlemassenstrom &#7745;<sub>K</sub></h3>
+		<hr />
+			<div>
+		  	<label for="pbrutto">P<sub>el</sub> = </label>
+			  <input id="pbrutto" type="text" value="746,19" />
+			  <p class="beschriftung"> MW - Gesamtleistung, brutto</p>
+      </div>
+			<div>
+		    <label for="wgrad">&#951; = </label>
+				<input id="wgrad" type="text" value="37,7" />
+				<p class="beschriftung"> &#37; - Gesamtwirkungsgrad</p>
+		  </div>
+			<div>
+		    <label for="hwert">H = </label>
+				<input id="hwert" type="text" value="30,58" />
+		  	<p class="beschriftung"> MJ/kg - Heizwert der Kohle</p>
+		  </div>												 					 						
+		  <input class="berechnenButton" style="float: none; margin-left: 55px" type="button" value="Berechnen!" onclick="mKohleBer()" />    
+			<div>
+		    <label for="mKohleth">&#7745;<sub>K</sub> = </label>
+				<input id="mKohleth" type="text"  />
+				<p class="beschriftung">kg/s - Massenstrom Kohle</p>
+		 </div>
+  </div>
+		<!-- cp Kohle berechnet -->	
+	<div id="cpKohleBerechnungBackground" class="eingabenBackground"></div>
+  <div id="cpKohleBerechnung" class="eingaben">	 	 		 											 										<!-- cp Kohle-Berechnung-->										 																 
+    <input class="close" type="button" value="&#935;" onclick="closeDiv('cpKohleBerechnung')" />
+		<h3>spez. Wärmekapazität der Kohle c<sub>pK</sub></h3> 
+		<hr />
+      <div>
+        <label for="fbKohle">FB<sub>K</sub> = </label>
+		  	<input id="fbKohle" type="text" value="5,5" />
+				<p class="beschriftung"> &#37; - flüchtige Bestandteile</p>
+			</div>
+			<div>
+		    <label for="asche">A = </label>
+		  	<input id="asche" type="text" value="6,23" />
+				<p class="beschriftung"> &#37; - Aschegehalt</p>
+			</div>
+			<input class="berechnenButton" style="float: none; margin-left: 55px" type="button" value="Berechnen!" onclick="cpKohleBer()" />
+			<div>
+		    <label for="cpKohleBer">c<sub>pK</sub> = </label>
+				<input id="cpKohleBer" type="text"  />
+				<p class="beschriftung"> kJ/kgK - spez.Wärmekap. Kohle<br />(roh, trocken)</p> 
+		  </div>
+  </div>
+	 											 															 	 
+  <div id="foot" ><img src="background_html_klein.png"  alt="" /></div>
+	
+</div>
+
+</body>
+</html>

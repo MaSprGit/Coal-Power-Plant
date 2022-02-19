@@ -1,0 +1,462 @@
+<!DOCTYPE html
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="de_DE" lang="de_DE" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Turbine</title>
+
+<style type="text/css">
+body { 	    font-family: Verdana;
+		 				margin-top: 0px;	
+						margin-left: 0px;		 
+		 				background: #ffffff url(background_neu.png) center top repeat-x;}
+					
+#content {	width: 950px;
+						margin: auto; }
+#contentImage {
+						position: absolute;
+						width: 950px;
+						height: 700px;
+						box-shadow: 0px 2px 15px #000000;
+						background: #D7D882  url(turbine.png) 10px 400px no-repeat;}
+						
+#header {		position: absolute;
+						width: 950px;
+						height: 140px;		
+						color: #ffffff; 						
+						border: none;
+						background: url(header_back_neu.jpg) center no-repeat; }
+#header h2 {padding-left:10px;
+					 	text-shadow: 2px 2px 5px #000000; }			
+						
+#einleitung {
+						position: absolute;
+						margin-top: 90px;
+						width: 930px;
+						height: 50px;
+						padding-left: 10px;
+						padding-right: 10px;
+						padding-top: 5px;
+						font-size: 90%;
+						font-style: italic; }
+						
+#einleitungBack {
+						position: absolute;
+						margin-top: 90px;
+						width: 950px;
+						height: 50px;
+						background-color: white;
+						opacity: 0.75; }	
+						
+#deck			{ position:absolute;
+						width: 950px; 
+						height: 20px; 
+						overflow: hidden;
+						margin: auto;
+						margin-top: 140px;
+						box-shadow: 0px 2px 15px #000000; }		
+																						
+.anleitung {position: absolute;
+					 	font-variant: small-caps;
+						font-weight: bold;
+						color: #4d0600; }
+#anleitung1 {
+						margin-top: 170px;
+						margin-left: 20px; }						
+#anleitung2 {
+						margin-top: 170px;
+						margin-left: 700px; }
+						
+.label    { position: absolute;		
+						padding: 5px;
+						width: 140px;
+						font-size: 80%;	
+						text-align: center;					
+						border: none;		
+						border-radius: 5px;
+						background-color: #9c0200;
+						box-shadow: 0px 5px 15px #3D1010;	}		
+.label:hover {
+						background-color: #4d0600;
+						color: #fff60b;
+						cursor: pointer; }		
+																
+#hdWerte {	margin-top: 200px; }
+						
+#mdWerte {	margin-top: 200px;											
+						margin-left: 160px;}	
+											
+#ndWerte {	margin-top: 200px;											
+						margin-left: 320px;}
+						
+#gWerte  {	margin-top: 200px;																
+						margin-left: 480px;}						
+														
+#berechnung {
+						margin-top: 200px;
+						margin-left: 680px;
+						width: 260px;
+						padding-top: 0;					
+						position: absolute;		
+						padding: 5px;
+						font-size: 80%;				
+						border: none;		
+						border-radius: 5px;
+						background-color: #9c0200;
+						box-shadow: 0px 5px 15px #3D1010;}					
+.eingaben h3 {
+						margin: 10px 0 0 10px;}
+.eingabenBackground {
+						background-color: #4d0600;
+						position: absolute;
+						opacity: 0.9;
+
+						border: none;
+						border-radius: 5px;
+						box-shadow: 0px 5px 15px #3D1010; }									
+.eingaben { border: none;
+						position: absolute;
+						border-radius: 5px;
+						font-size: 80%;
+						color: #fff60b;	}
+
+#werteHd	{	margin-top: 315px;
+						width: 450px;					
+						display: none; }
+#werteHdBackground {
+						margin-top: 315px;
+						width: 450px;
+						height: 140px;
+						display: none;	}	
+						
+#werteMd	{	margin-top: 315px;
+						width: 450px;
+						margin-left: 160px;					
+						display: none; }
+#werteMdBackground {
+						margin-top: 315px;
+						width: 450px;
+						height: 140px;
+						margin-left: 160px;		
+						display: none;	}	
+						
+#werteNd	{	margin-top: 315px;
+						width: 450px;		
+						margin-left: 320px;			
+						display: none; }
+#werteNdBackground {
+						margin-top: 315px;
+						width: 450px;
+						height: 370px;
+						margin-left: 320px;
+						display: none;	}		
+											
+#werteG	{		margin-top: 315px;
+						width: 400px;		
+						margin-left: 480px;			
+						display: none; }
+#werteGBackground {
+						margin-top: 315px;
+						width: 400px;
+						height: 50px;
+						margin-left: 480px;
+						display: none;	}	
+										
+.beschriftung {
+						margin-left: 120px;}											
+label 		{ position: absolute;
+						float: left;
+						margin-left: 10px; }						
+input[type=text] {
+						width: 50px;
+						position: absolute;
+						margin-left: 60px;
+						border-radius: 5px;
+						text-align: right; }	
+
+
+.berechnenButton {
+						border-radius: 5px;
+						font-size: 15px;
+						background-color: #000000;
+						color: #ff6100;
+						text-align: center;
+						float: right; }	
+.berechnenButton:hover {		
+            cursor: pointer; }	
+																	
+.closeX {		color: #ff0000;      																	 					  
+						background-color: #000000;					
+						font-size: 20px;					
+						width: 27px;
+						margin: 0px;
+						padding: 0px;
+						text-align: center;
+						border-radius: 5px;
+						border: 2px solid;
+						position: relative;
+						float: right; }
+.closeX:hover {
+						cursor: pointer; }											
+#foot			{ position:absolute;
+						width: 950px; 
+						height: 20px; 
+						overflow: hidden;
+						margin: auto;
+						margin-top: 700px;
+						box-shadow: 0px -2px 15px #000000; }
+						
+.trenn {    height: 0px;
+			 			border-bottom: 1px solid;
+						padding: 0;
+						margin-bottom: -7px; }
+											
+</style>
+<script type="text/javascript" src="formeln_turbine.js"></script>
+<script type="text/javascript" src="dynamik_turbine.js"></script>
+
+<script type="text/javascript" src="footer.js"></script>
+<link rel="stylesheet" href="footer.css" type="text/css" />
+
+<link rel="stylesheet" href="navi.css" type="text/css" />
+</head>
+
+<body>
+
+<!-- Inhalt -->
+<div id="content">
+  <div id="contentImage"></div>
+  <div id="header">
+	  <h2>Turbine</h2>
+  </div>
+  <div id="einleitungBack"></div>
+	<p id="einleitung">In den Turbinenstufen wird Dampf entspannt und damit mechanische Arbeit erzeugt, welche im Generator in elektische Energie umgewandelt wird. Die Turbine besteht aus Hoch-, Mittel und Niederdruckteil, wobei der ND-Teil aus zwei Stufen besteht.</p>
+	
+	<div id="deck" ><img src="background_html_klein.png"  alt="" /></div>
+	<p id="anleitung1" class="anleitung">1.&nbsp;Dateneingabe!</p>
+	<p id="anleitung2" class="anleitung">2.&nbsp;Berechnung&nbsp;starten!</p>
+
+	<div class="label" id="hdWerte" onclick="eingabenHd()">
+    <h3>Hochdruckteil</h3>
+    <p>Dateneingabe für<br />HD-Stufe:</p>
+  </div>
+	<div class="label" id="mdWerte" onclick="eingabenMd()">
+    <h3>Mitteldruckteil</h3>
+    <p>Dateneingabe für<br />MD-Stufe:</p>
+  </div>
+	<div class="label" id="ndWerte" onclick="eingabenNd()">
+    <h3>Niederdruckteil</h3>
+    <p>Dateneingabe für<br />ND-Stufen:</p>
+  </div>
+	<div class="label" id="gWerte" onclick="eingabenG()">
+    <h3>Generator</h3>
+    <p>Dateneingabe für Generator:</p>
+  </div>
+						 <!-- Berechnung Starten -->
+	<div id="berechnung">
+    <h3>mech. Leistung<br />nach Stufen:<input class="berechnenButton" type="button" value="Berechnen!" onclick="pMech()" /></h3>
+		
+		<div>
+  		<label for="phd" >P<sub>HD</sub> = </label>
+  		<input id="phd" type="text" value="" />
+  		<p class="beschriftung"> MW - HD-Stufe</p>
+  	</div>
+		<div>		
+      <label for="pmd" >P<sub>MD</sub>= </label>
+			<input id="pmd" type="text" value="" />	
+			<p class="beschriftung"> MW - MD-Stufe</p>		
+		</div>
+		<div>		
+      <label for="pnd1" >P<sub>ND1</sub> = </label>
+			<input id="pnd1" type="text" value="" />	
+			<p class="beschriftung"> MW - ND-Stufe 1</p>	
+		</div>
+		<div>		
+      <label for="pnd2" >P<sub>ND1</sub> = </label>
+			<input id="pnd2" type="text" value="" />	
+			<p class="beschriftung"> MW - ND-Stufe 2</p>	
+		</div>
+		<h3>mech. Gesamtleistung:</h3>
+		<div>		
+      <label for="pges" >P<sub>mech</sub>= </label>
+			<input id="pges" type="text" value="" />	
+			<p class="beschriftung"> MW</p>		
+		</div>
+		<h3>elektrische Leistung:</h3>
+		<div>		
+      <label for="pel" >P<sub>el</sub>= </label>
+			<input id="pel" type="text" value="" />	
+			<p class="beschriftung"> MW</p>		
+		</div>
+  </div>
+								<!-- Hochdruck -->
+  <div class="eingabenBackground" id="werteHdBackground"></div>								
+  <div class="eingaben" id="werteHd">
+    <div><input class="closeX" type="button" value="X" onclick="closeDiv('werteHd')" /></div>
+  	<div>
+	    <label for="mHDein">&#7745;<sub>HD1</sub> = </label>
+			<input id="mHDein" type="text" value="618,63" />
+			<p class="beschriftung"> kg/s - Massenstrom Dampf, HD-Eintritt</p>
+	  </div>
+	  <div>
+	    <label for="hHDein">h<sub>HD1</sub>= </label>
+			<input id="hHDein" type="text" value="3330,7" />
+			<p class="beschriftung"> kJ/kg - Enthalpie Dampf, HD-Eintritt</p>
+	  </div>
+		<div>
+	    <label for="mHDaus">&#7745;<sub>HD2</sub> = </label>
+			<input id="mHDaus" type="text" value="616,95" />
+			<p class="beschriftung"> kg/s - Massenstrom Dampf, HD-Austritt</p>
+	  </div>
+	  <div>
+	    <label for="hHDaus">h<sub>HD2</sub>= </label>
+			<input id="hHDaus" type="text" value="2951,5" />
+			<p class="beschriftung"> kJ/kg - Enthalpie Dampf, HD-Austritt</p>
+	  </div>
+		<!--<div>
+	    <label for="wHD">&#951;<sub>HD</sub>= </label>
+			<input id="wHD" type="text" value="88,13" />
+			<p class="beschriftung"> &#37; - HD-Turbinenwirkungsgrad</p>
+	  </div>-->
+  </div>
+								<!-- Mitteldruck -->
+  <div class="eingabenBackground" id="werteMdBackground"></div>								
+  <div class="eingaben" id="werteMd">
+    <div><input class="closeX" type="button" value="X" onclick="closeDiv('werteMd')" /></div>
+  	<div>
+	    <label for="mMDein">&#7745;<sub>MD1</sub> = </label>
+			<input id="mMDein" type="text" value="571,07" />
+			<p class="beschriftung"> kg/s - Massenstrom Dampf, MD-Eintritt</p>
+	  </div>
+	  <div>
+	    <label for="hMDein">h<sub>MD1</sub>= </label>
+			<input id="hMDein" type="text" value="3515,8" />
+			<p class="beschriftung"> kJ/kg - Enthalpie Dampf, MD-Eintritt</p>
+	  </div>
+		<div>
+	    <label for="mMDaus">&#7745;<sub>MD2</sub> = </label>
+			<input id="mMDaus" type="text" value="528,45" />
+			<p class="beschriftung"> kg/s - Massenstrom Dampf, MD-Austritt</p>
+	  </div>
+	  <div>
+	    <label for="hMDaus">h<sub>MD2</sub>= </label>
+			<input id="hMDaus" type="text" value="3359,49" />
+			<p class="beschriftung"> kJ/kg - Enthalpie Dampf, MD-Austritt</p>
+	  </div>
+		<!--<div>
+	    <label for="wMD">&#951;<sub>MD</sub>= </label>
+			<input id="wMD" type="text" value="89,46" />
+			<p class="beschriftung"> &#37; - MD-Turbinenwirkungsgrad</p>
+	  </div>-->
+  </div>	
+									<!-- Niederdruck -->
+  <div class="eingabenBackground" id="werteNdBackground"></div>								
+  <div class="eingaben" id="werteNd">
+    <input class="closeX" type="button" value="X" onclick="closeDiv('werteNd')" />
+		<h3>ND-Stufe I</h3>
+		<div>
+	    <label for="mNDein1">&#7745;<sub>ND<sub>I</sub>1</sub>= </label>
+			<input id="mNDein1" type="text" value="235,86" />
+			<p class="beschriftung"> kg/s - Massenstrom Dampf, ND<sub>I</sub>-Eintritt</p>
+	  </div>
+	  <div>
+	    <label for="hNDein1">h<sub>ND<sub>I</sub>1</sub>= </label>
+			<input id="hNDein1" type="text" value="3089,0" />
+			<p class="beschriftung"> kJ/kg - Enthalpie Dampf, ND<sub>I</sub>-Eintritt</p>
+	  </div>
+		<div>
+	    <label for="mNDaus1">&#7745;<sub>ND<sub>I</sub>2</sub>= </label>
+			<input id="mNDaus1" type="text" value="236,53" />
+			<p class="beschriftung"> kg/s - Massenstrom Dampf, ND<sub>I</sub>-Austritt</p>
+	  </div>
+	  <div>
+	    <label for="hNDaus1">h<sub>ND<sub>I</sub>2</sub>= </label>
+			<input id="hNDaus1" type="text" value="2453,99" />
+			<p class="beschriftung"> kJ/kg - Enthalpie Dampf, ND<sub>I</sub>-Austritt</p>
+	  </div>
+		<!--<div>
+	    <label for="wND1">&#951;<sub>ND<sub>I</sub></sub>= </label>
+			<input id="wND1" type="text" value="87,84" />
+			<p class="beschriftung"> &#37; - ND<sub>I</sub>-Turbinenwirkungsgrad</p>
+	  </div>-->
+		<div class="trenn"></div>
+		
+    <h3>ND-Stufe II</h3>
+		<div>
+	    <label for="mNDein2">&#7745;<sub>ND<sub>II</sub>1</sub>= </label>
+			<input id="mNDein2" type="text" value="235,86" />
+			<p class="beschriftung"> kg/s - Massenstrom Dampf, ND<sub>II</sub>-Eintritt</p>
+	  </div>
+	  <div>
+	    <label for="hNDein2">h<sub>ND<sub>II</sub>1</sub>= </label>
+			<input id="hNDein2" type="text" value="3089,0" />
+			<p class="beschriftung"> kJ/kg - Enthalpie Dampf, ND<sub>II</sub>-Eintritt</p>
+	  </div>
+		<div>
+	    <label for="mNDaus2">&#7745;<sub>ND<sub>II</sub>2</sub>= </label>
+			<input id="mNDaus2" type="text" value="235,44" />
+			<p class="beschriftung"> kg/s - Massenstrom Dampf, ND<sub>II</sub>-Austritt</p>
+	  </div>
+	  <div>
+	    <label for="hNDaus2">h<sub>ND<sub>II</sub>2</sub>= </label>
+			<input id="hNDaus2" type="text" value="2501,27" />
+			<p class="beschriftung"> kJ/kg - Enthalpie Dampf, ND<sub>II</sub>-Austritt</p>
+	  </div>	
+		<!--<div>
+	    <label for="wND2">&#951;<sub>ND<sub>II</sub></sub>= </label>
+			<input id="wND2" type="text" value="87,44" />
+			<p class="beschriftung"> &#37; - ND<sub>II</sub>-Turbinenwirkungsgrad</p>
+	  </div>-->	
+  </div>	
+										<!-- Generator -->
+  <div class="eingabenBackground" id="werteGBackground"></div>								
+  <div class="eingaben" id="werteG">
+    <div><input class="closeX" type="button" value="X" onclick="closeDiv('werteG')" /></div>
+		<div>
+	    <label for="wG">&#951;<sub>G</sub>= </label>
+			<input id="wG" type="text" value="98,21" />
+			<p class="beschriftung"> &#37; - Generatorwirkungsgrad</p>
+	  </div>
+  </div>	
+	<div id="foot" ><img src="background_html_klein.png"  alt="" /></div>
+</div>
+
+<!-- Navigation -->
+<a href="kuehlturm.htm"><img id="navi_vor" src="navi_vor.png" height="50" style="border: 0;" alt="weiter" /></a>
+<a href="dampferzeuger.htm"><img id="navi_back" src="navi_back.png" height="50" style="border: 0;" alt="back" /></a>
+<a href="home.htm"><img id="navi_home" src="navi_home.png" height="50" style="border: 0;" alt="Startseite" /></a>
+
+<!-- Footer mit Impressum -->
+	<img id="footer_button" src="footer_button.png" height="50" onclick="footer()" alt="Impressum an" />
+  <img id="footer_button_minus" src="footer_button_minus.png" height="50" onclick="footerMinus()"  alt="Impressum aus"/>
+  <div id="footer_content">
+  	<div id="footer_all">
+  	  <div id="footer_top">
+  		  <div id="footer_logo">
+    			<a href="http://www.fh-trier.de" target="_blank"><img src="logo_fh.png" height="30" alt="Fachhochschule Trier" /> Fachhochschule Trier</a>
+  			</div>
+  			<div id="footer_impressum">
+  			  <p onmouseover="impressum()" onmouseout="impressumOut()">Impressum</p>
+  			</div>
+  		</div>
+  		<div id="footer_info">
+  		  <div id="footer_copy">
+  			  <p>Copyright &#169; 2012 Markus Springer. All rights reserved.<br />
+  				   mail to: <a href="mailto:springem@fh-trier.de">Webmaster</a></p>
+  			</div>
+  			<div id="footer_name">
+    			<p>Kraftwerkstechnik, Luftreinhaltung WS 2011/12<br />
+    			   Kohlekraftwerk Ibbenbüren - RWE Power AG</p>
+  			</div>
+  		</div>
+    	<div id="impressum">
+        <h3>Projektarbeit der Vorlesung Kraftwerkstechnik und Luftreinhaltung WS-2011/12<br />
+        	   im Masterstudiengang Gebäude- und Energiemanagement</h3>
+        <p>erstellt von:<br />
+    				 Markus Springer<br />
+        		 Christian Lübeck</p>
+    	</div>
+		</div>	
+  </div>	
+</body>
+</html>

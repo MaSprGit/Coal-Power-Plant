@@ -1,0 +1,105 @@
+#footer_button {
+						opacity: 0.7;
+            cursor: pointer;
+            position: fixed;
+						border-radius: 10px;
+						top: 10px;
+            right: 20px;
+						z-index: 3;
+						box-shadow: -2px -2px 15px #000000;
+						box-shadow: 2px 2px 15px #000000; }
+							
+#footer_button:hover {
+						opacity: 1; }
+						
+#footer_button_minus {
+						display: none;
+						opacity: 0.7;
+            cursor: pointer;
+            position: fixed;
+						border-radius: 10px;
+						top: 10px;
+            right: 20px;
+						z-index: 3;
+						box-shadow: -2px -2px 15px #000000;
+						box-shadow: 2px 2px 15px #000000; }	
+						
+#footer_button_minus:hover {
+						opacity: 1; }		
+										
+#footer_content {		
+						position: fixed;
+						width: 100%;
+						bottom: 0px;
+						margin-left: 0px;
+						z-index: 2;
+						opacity: 0.97;
+						background: #ffffff url(footer.png) center top;
+						display: none;
+						box-shadow: 0px -2px 15px #000000; }
+#footer_all {
+						width: 950px;
+						margin: auto;
+						padding-right: 9px; }
+#footer_top {
+						width: 940px;
+					  margin-top: 10pt;
+					  margin-right: auto;
+					  margin-bottom: 0pt;
+					  margin-left: auto;
+            overflow-x: hidden;
+            overflow-y: hidden;
+            color: #666666;		}				          						
+#footer_logo {
+						float: right;
+						margin-right: 10px; }
+#footer_logo img {
+            border: 0; }				
+#footer_logo a {	
+						color: #666666;
+						text-decoration: none; }
+#footer_logo a:focus {
+						outline: none; }	
+						
+#footer_impressum {
+						font-weight: bold;
+						width: 100px;
+						cursor: pointer;}										
+#footer_info {
+            height: 80px;
+            border-top: 2px solid #555555; }
+#footer_copy {
+            min-width: 200px;
+            height: 100px;
+            float: left;					
+						color: #ffffff;
+            margin-right: auto;
+            font-size: 13px;}
+#footer_name {
+						margin-top: 0pt;
+            margin-right: 10pt;
+            margin-bottom: 0pt;
+            margin-left: 0pt;
+            float: right;
+						font-family: Georgia;
+						font-size: 20px;
+						text-align: right;
+						color: #C7C7C7;}
+						
+#impressum {background-color: white;
+						position: absolute;
+						top: 5px;
+						margin-left: 120px;
+						font-size: 13px;
+						color: #36310F;
+						padding-left: 15px; 
+						padding-right: 15px;
+						border-radius: 5px;
+						opacity: 0.8;
+						display: none;}
+#impressum h3 {
+					  font-size: 15px;
+						font-family: Georgia;}			
+#impressum p {
+					  padding-left: 25px; }
+														
